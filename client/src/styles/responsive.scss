@@ -1,0 +1,142 @@
+@import './_mixin.scss';
+
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (max-width: 1024px) {
+  .inner {
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
+  .gallery-list {
+    li {
+      .thumbnail {
+        height: rem(200);
+      }
+    }
+  }
+}
+
+/* 테블릿 */
+@media all and (max-width: 768px) {
+  .inner {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+  .sub {
+    padding-top: rem(0);
+  }
+  .header {
+    background: #fff;
+    &.on {
+      background-color: #fff;
+    }
+    .hd-inner {
+      padding: rem(20);
+    }
+    .hd-btn {
+      padding: 0 rem(20);
+      .btn {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .main-visual {
+    padding: rem(160) rem(20) rem(80);
+    h2 {
+      font-size: rem(24);
+    }
+  }
+
+  .gallery-list {
+    flex-wrap: wrap;
+    li {
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: rem(50);
+      .thumbnail {
+        height: rem(350);
+      }
+    }
+  }
+
+  // about
+  .about {
+    & > div {
+      margin-bottom: rem(40);
+    }
+  }
+  .about-sec01 {
+    .me {
+      flex-wrap: wrap;
+      padding: rem(30) rem(20);
+      .left {
+        margin-right: 0;
+        width: rem(200);
+        height: rem(200);
+      }
+      .right {
+        @include flexCenter;
+        margin-top: rem(15);
+        width: 100%;
+        li {
+          font-size: rem(14);
+        }
+      }
+    }
+  }
+
+  .about-sec02 {
+    .skill-img-list {
+      flex-wrap: wrap;
+      li {
+        max-width: rem(80);
+      }
+    }
+    .skill-list {
+      flex-wrap: wrap;
+      li {
+        line-height: rem(24);
+      }
+    }
+  }
+
+  .about-sec03 {
+    flex-wrap: wrap;
+    & > div:nth-of-type(1) {
+      margin-bottom: rem(40);
+    }
+    .career {
+      width: 100%;
+      dl {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  // board
+  .write-inputs {
+    width: 100%;
+  }
+}
+
+/* 모바일 */
+@media all and (max-width: 480px) {
+  .inner {
+    padding-left: rem(14);
+    padding-right: rem(14);
+  }
+
+  .header {
+    .hd-inner {
+      padding: rem(20) rem(14);
+    }
+  }
+
+  .gallery-list {
+    li {
+      .thumbnail {
+        height: rem(260);
+      }
+    }
+  }
+}

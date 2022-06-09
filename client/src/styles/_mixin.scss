@@ -1,0 +1,33 @@
+
+$browser-context: 16;
+
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}rem;
+}
+
+@mixin ArchivoFont {
+    font-family: 'Archivo Black';
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexEnd {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
