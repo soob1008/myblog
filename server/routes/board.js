@@ -1,15 +1,14 @@
-const express = require("express");
-const { ObjectId } = require("mongodb");
-const { mongoose } = require("mongoose");
+import express from "express";
+
 const router = express.Router();
-const multer = require("multer");
-
-const { Board } = require("../models/Board");
-
+import multer from "multer";
+import Board from "../models/Board.js";
+import path from 'path';
+const __dirname = path.resolve();
 //multer-optional
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "client/public/uploads/");
+    cb(null, __dirname+"/build/uploads/");
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}_${file.originalname}`);
@@ -77,7 +76,7 @@ router.post("/update/:shortId", (req, res) => {
 });
 
 //특정 게시물 불러오기
-router.post("/getDetail/:shortId", (req, res) => {
+router.get("/getDetail/:shortId", (req, res) => {
   const { shortId } = req.params;
 
   Board.findOne({ shortId: shortId }).exec((err, board) => {
@@ -89,7 +88,7 @@ router.post("/getDetail/:shortId", (req, res) => {
 });
 
 //전체 게시물 - 리스트페이지
-router.post("/getList", (req, res) => {
+router.get("/getList", (req, res) => {
   Board.find({ sort: { createAt: 1 } }).exec((err, boards) => {
     if (err) return res.status(400).send(err);
     else return res.status(200).json({ success: true, boards });
@@ -97,12 +96,13 @@ router.post("/getList", (req, res) => {
 });
 
 //메인
-router.post("/getMainList", (req, res) => {
-  Board.find({ sort: { createAt: -1 } })
+router.get("/getMainList", (req, res) => {
+  Board.find({ sort: { createAt: 1 } })
     .limit(3)
     .exec((err, boards) => {
       if (err) return res.status(400).send(err);
       else return res.status(200).json({ success: true, boards });
     });
 });
-module.exports = router;
+
+export default router;

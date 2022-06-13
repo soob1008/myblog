@@ -23,18 +23,8 @@ const About = () => {
                                 <li>010.3249.2471</li>
                                 <li>1008sb354@gmail.com</li>
                                 <li>
-                                    <Link
-                                        to="/"
-                                        className="btn btn-type1 medium radius"
-                                    >
-                                        Github
-                                    </Link>
-                                    <Link
-                                        to="/"
-                                        className="btn btn-type1 medium radius"
-                                    >
-                                        Resume
-                                    </Link>
+                                    <a target="_blank" className="btn btn-type1 medium radius" href='https://soob108.notion.site/Front-End-Developer-d807636973ed4b409684c47389d52bc7'>Resume</a>
+                                    <a target="_blank" className="btn btn-type1 medium radius" href='https://github.com/soob1008'>Github</a>
                                 </li>
                             </ul>
                         </div>
@@ -116,36 +106,43 @@ const About = () => {
                     <div className="career">
                         <h2 className="title large">
                             Career<span className="underline"></span>
-                        </h2>
+                        </h2>       
                         <div className="cr">
                             <dl>
-                                <dt>건국대학교 컴퓨터공학과 학사 졸업</dt>
-                                <dd>2013.03 - 2017.02</dd>
-                            </dl>
-                        </div>
-                        <div className="cr">
-                            <dl>
-                                <dt>UnityLab</dt>
-                                <dd>2019.04 - 2019.12</dd>
-                            </dl>
-                            <ul>
-                                <li>- 퍼블리싱</li>
-                                <li>- 그누보드/영카트</li>
-                            </ul>
-                        </div>
-                        <div className="cr">
-                            <dl>
-                                <dt>M-sync</dt>
+                                <dt>엠싱크</dt>
                                 <dd>2020.07 - 2022.04</dd>
                             </dl>
+                            <p>
+                                API를 활용한 데이터 입출력<br/>
+                                사용자 인터페이스 작업
+                            </p>
                             <ul>
                                 <li>- 동원몰 앱 구축</li>
-                                <li>- 미래엔 웹 개발</li>
-                                <li>- youandus 웹 개발</li>
-                                <li>- SDG 설문조사 기능 개발</li>
+                                <li>- 미래엔, 유앤어스 웹 개발</li>
+                                <li>- SDG 설문조사 기능 추가 개발</li>
                             </ul>
                         </div>
                     </div>
+                    <div className="career">
+                        <h2 className="title large">
+                            Education<span className="underline"></span>
+                        </h2>
+                        <div className="cr">
+                            <dl>
+                                <dt>에이콘 아카데미 웹 개발자 양성과정</dt>
+                                <dd>2017.03 - 2017.09</dd>
+                            </dl>
+                        </div>
+                        <div className="cr">
+                            <dl>
+                                <dt>건국대학교 글로컬캠퍼스 컴퓨터공학과 학사 졸업</dt>
+                                <dd>2013.03 - 2017.02</dd>
+                            </dl>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div className="about-sec03">
                     <div className="career">
                         <h2 className="title large">
                             Certification<span className="underline"></span>
@@ -153,10 +150,11 @@ const About = () => {
                         <div className="cr">
                             <dl>
                                 <dt>정보처리기사</dt>
+                                <dd>2016.07</dd>
                             </dl>
                         </div>
                     </div>
-                </div>
+                 </div>
                 {/* skill */}
             </div>
         </Layout>

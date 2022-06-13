@@ -54,11 +54,11 @@ const HeaderMobile = (props) => {
                         <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <Link to="/board/list">Projects</Link>
+                        <Link to="/board/list">Project</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/contact">Contact</Link>
-                    </li>
+                    </li> */}
                 </ul>
                 <div className="hd-btn" onClick={onOpenHandler}>
                     {props.login ? (
@@ -89,7 +89,7 @@ const HeaderPc = (props) => {
                 <div className="gnb">
                     <Link to="/about">About</Link>
                     <Link to="/board/list">Projects</Link>
-                    <Link to="/contact">Contact</Link>
+                    {/* <Link to="/contact">Contact</Link> */}
                 </div>
             </nav>
             <div className="hd-btn">
@@ -120,10 +120,6 @@ const HeaderContent = (props) => {
     const isTablet = useMediaQuery({
         query: '(max-width: 768px)',
     });
-
-    useEffect(() => {
-        axios.get('/api/hello').then((response) => console.log(response.data));
-    }, []);
 
     useEffect(() => {
         dispatch(auth()).then((response) => {

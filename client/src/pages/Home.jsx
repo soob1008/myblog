@@ -24,7 +24,7 @@ const Home = () => {
         <div className="main">
             <div className="main-visual">
                 <h2>Hello! My Blog.</h2>
-                <p>설명글</p>
+                <p>I'm subeen, a first-year front-end developer.</p>
             </div>
             <div className="main-content">
                 <div className="inner">

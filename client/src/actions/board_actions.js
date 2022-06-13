@@ -43,7 +43,7 @@ export function updateBoard(data, id) {
 
 //특정 게시물 가져오기
 export function getDetailBoard(data, id) {
-    const request = Axios.post(`/api/board/getDetail/${id}`, data).then(
+    const request = Axios.get(`/api/board/getDetail/${id}`).then(
         (response) => response.data
     );
     return {
@@ -54,7 +54,7 @@ export function getDetailBoard(data, id) {
 
 //모든 게시물 가져오기
 export function getListBoard(data) {
-    const request = Axios.post('/api/board/getList', data).then(
+    const request = Axios.get('/api/board/getList').then(
         (response) => response.data
     );
     return {
@@ -65,7 +65,7 @@ export function getListBoard(data) {
 
 //메인 게시물 가져오기
 export function getMainList(data) {
-    const request = Axios.post('/api/board/getMainList', data).then(
+    const request = Axios.get('/api/board/getMainList').then(
         (response) => response.data
     );
 

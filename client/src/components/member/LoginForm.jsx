@@ -45,7 +45,7 @@ const LoginForm = () => {
     return (
         <div className="member-wrap">
             <div className="member-form">
-                <form onSubmit={onSubmitHandler}>
+                <form onSubmit={onSubmitHandler} method="post">
                     <h2>LOGIN</h2>
                     <div className="input-type type1 w100">
                         <label className="sr-only">Email</label>
