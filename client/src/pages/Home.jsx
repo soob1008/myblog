@@ -59,6 +59,9 @@ const Home = () => {
                                 </li>
                             ))}
                     </ul>
+                    <div className="btn-wrap">
+                        <Link to="/board/list" className="btn btn-type2 large2 radius" >More</Link>
+                    </div>
                 </div>
             </div>
         </div>
