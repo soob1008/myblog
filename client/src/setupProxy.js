@@ -5,13 +5,13 @@
 
     (서버 : 5000번 포트, 클라이언트 : 3000번 포트)
 */
-const { createProxyMiddleware } = require('http-proxy-middleware');
-module.exports = function(app) {
-    app.use(
-        '/api',
-        createProxyMiddleware({
-            target: 'http://localhost:5000',
-            chagneOrigin: true,
-        })
-    );
+const { createProxyMiddleware } = require("http-proxy-middleware");
+module.exports = function (app) {
+  app.use(
+    "/api",
+    createProxyMiddleware({
+      target: "http://localhost:5000",
+      chagneOrigin: true,
+    })
+  );
 };
